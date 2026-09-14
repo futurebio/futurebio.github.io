@@ -48,10 +48,22 @@ footer{padding:26px 0 40px;color:var(--sub);font-size:13px}
 footer .wrap{border-top:1px solid var(--line);padding-top:16px}
 .idx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
 .idx-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
-.idx-card h3{margin:0 0 6px;font-size:16px}
+.idx-card h2{margin:0 0 6px;font-size:16px;border:none;padding:0}
 .idx-card p{margin:0;color:var(--sub);font-size:14px}
 .idx-card .n{color:var(--green);font-weight:700;font-size:13px}
-@media print{.topbar nav,footer{display:none}.pcard,.idx-card{break-inside:avoid}}
+/* 品类页：左侧分组产品 + 右侧吸顶细分导航 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:22px;align-items:start}
+.sidenav{position:sticky;top:14px}
+.sn-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;max-height:calc(100vh - 40px);overflow:auto}
+.sn-t{font-size:12px;color:var(--sub);margin:10px 0 4px;font-weight:700;letter-spacing:.5px}
+.sn-t:first-child{margin-top:0}
+.sn-box a{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:13.5px;padding:5px 0;border-bottom:1px dashed var(--line);line-height:1.4}
+.sn-box a .n{color:var(--green);font-size:12px;white-space:nowrap}
+.sub-head{margin:26px 0 12px;font-size:18px;border-left:4px solid var(--brand);padding-left:10px}
+.sub-head:first-child{margin-top:0}
+.sub-head .n{color:var(--sub);font-size:13px;font-weight:400;margin-left:8px}
+@media(max-width:960px){.layout{grid-template-columns:1fr}.sidenav{position:static;order:-1}.sn-box{max-height:none}}
+@media print{.topbar nav,footer,.sidenav{display:none}.pcard,.idx-card{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -63,21 +75,21 @@ footer .wrap{border-top:1px solid var(--line);padding-top:16px}
 <p class="crumb"><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/">首页</a> › 功效方案</p>
 <div class="hero"><h1>按配方问题找原料 · 功效方案</h1><p class="lead">研发人员最常问的 15 个配方问题，每个问题给出对应的在售原料推荐、选型建议与常见问题解答。</p></div>
 <section><div class="idx-grid">
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/sensitive-skin/">敏感肌修护用什么原料？</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/moisturizing/">化妆品天然保湿剂怎么选？</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/anti-aging/">抗氧化、抗老原料有哪些可靠选择？</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/soothing/">抗炎舒缓原料怎么选？泛红、敏感配方的解法</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/lip-wax/">口红、膏霜用什么蜡好？天然植物蜡选型</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/mild-cleansing/">温和清洁配方怎么选表面活性剂？</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/natural-emulsifier/">天然来源乳化剂有哪些？怎么搭乳化体系？</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/baby-care/">母婴产品配方用什么原料安全温和？</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/silicone-free-hair/">无硅油洗护配方用什么调理剂？</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/sunscreen/">防晒配方原料怎么选？</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/preservative-system/">无防腐、低防腐体系怎么做？</a></h3><p><span class="n">10 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/thickening/">精华、洗护的增稠悬浮怎么解决？</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/natural-oils/">以油养肤：天然植物油脂怎么选？</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/ester-emollients/">合成酯类润肤剂怎么选？肤感设计的核心工具</a></h3><p><span class="n">12 款推荐原料</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/actives-guide/">功效活性物怎么搭配？52款活性物选型地图</a></h3><p><span class="n">53 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/sensitive-skin/">敏感肌修护用什么原料？</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/moisturizing/">化妆品天然保湿剂怎么选？</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/anti-aging/">抗氧化、抗老原料有哪些可靠选择？</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/soothing/">抗炎舒缓原料怎么选？泛红、敏感配方的解法</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/lip-wax/">口红、膏霜用什么蜡好？天然植物蜡选型</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/mild-cleansing/">温和清洁配方怎么选表面活性剂？</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/natural-emulsifier/">天然来源乳化剂有哪些？怎么搭乳化体系？</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/baby-care/">母婴产品配方用什么原料安全温和？</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/silicone-free-hair/">无硅油洗护配方用什么调理剂？</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/sunscreen/">防晒配方原料怎么选？</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/preservative-system/">无防腐、低防腐体系怎么做？</a></h2><p><span class="n">10 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/thickening/">精华、洗护的增稠悬浮怎么解决？</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/natural-oils/">以油养肤：天然植物油脂怎么选？</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/ester-emollients/">合成酯类润肤剂怎么选？肤感设计的核心工具</a></h2><p><span class="n">12 款推荐原料</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/actives-guide/">功效活性物怎么搭配？52款活性物选型地图</a></h2><p><span class="n">53 款推荐原料</span></p></div>
 </div></section>
 
   <section aria-labelledby="contact">

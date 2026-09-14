@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>发用调理剂原料 | 赋铖生物</title>
-<meta name="description" content="赋铖生物发用调理剂类化妆品原料9款，含成分INCI、供应商与功效特点，电话/微信17375457376。">
+<meta name="description" content="赋铖生物发用调理剂类化妆品原料9款，按应用场景细分，含成分INCI、供应商与功效特点，电话/微信17375457376。">
 <meta property="og:site_name" content="赋铖生物科技（上海）有限公司">
 <meta property="og:title" content="发用调理剂原料 | 赋铖生物">
 <style>
@@ -48,10 +48,22 @@ footer{padding:26px 0 40px;color:var(--sub);font-size:13px}
 footer .wrap{border-top:1px solid var(--line);padding-top:16px}
 .idx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
 .idx-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
-.idx-card h3{margin:0 0 6px;font-size:16px}
+.idx-card h2{margin:0 0 6px;font-size:16px;border:none;padding:0}
 .idx-card p{margin:0;color:var(--sub);font-size:14px}
 .idx-card .n{color:var(--green);font-weight:700;font-size:13px}
-@media print{.topbar nav,footer{display:none}.pcard,.idx-card{break-inside:avoid}}
+/* 品类页：左侧分组产品 + 右侧吸顶细分导航 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:22px;align-items:start}
+.sidenav{position:sticky;top:14px}
+.sn-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;max-height:calc(100vh - 40px);overflow:auto}
+.sn-t{font-size:12px;color:var(--sub);margin:10px 0 4px;font-weight:700;letter-spacing:.5px}
+.sn-t:first-child{margin-top:0}
+.sn-box a{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:13.5px;padding:5px 0;border-bottom:1px dashed var(--line);line-height:1.4}
+.sn-box a .n{color:var(--green);font-size:12px;white-space:nowrap}
+.sub-head{margin:26px 0 12px;font-size:18px;border-left:4px solid var(--brand);padding-left:10px}
+.sub-head:first-child{margin-top:0}
+.sub-head .n{color:var(--sub);font-size:13px;font-weight:400;margin-left:8px}
+@media(max-width:960px){.layout{grid-template-columns:1fr}.sidenav{position:static;order:-1}.sn-box{max-height:none}}
+@media print{.topbar nav,footer,.sidenav{display:none}.pcard,.idx-card{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -62,8 +74,20 @@ footer .wrap{border-top:1px solid var(--line);padding-top:16px}
 <main class="wrap">
 <p class="crumb"><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/">首页</a> › <a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/">产品库</a> › 发用调理剂</p>
 <div class="hero"><h1>发用调理剂原料（9 款）</h1>
-<p class="lead">赋铖生物发用调理剂类在售原料全览，每款标注成分、供应商与功效特点，点击功效方案页可查看按配方问题的推荐组合。</p></div>
-<section aria-label="产品列表">
+<p class="lead">赋铖生物发用调理剂类在售原料共 9 款，按应用场景细分为 2 组：头皮护理·育发去屑、洗发护发·调理修护。右侧导航可快速跳转；按配方问题选型请看功效方案页。</p></div>
+<section aria-label="产品列表"><div class="layout"><div class="main-col">
+<h2 class="sub-head" id="sub-0">头皮护理·育发去屑<span class="n">2 款</span></h2>
+<article class="pcard" id="p144">
+<h2>HOLL'S®HOA50</h2>
+<p class="meta"><b>成分/INCI：</b>水解燕麦、麦芽寡糖葡糖苷等　<b>供应商：</b>苏州奥氏</p>
+<p>多糖降低刺激，增泡稳泡；绿色高效解决头痒头屑</p>
+</article>
+<article class="pcard" id="p145">
+<h2>OLGOSEA 奥丽格思 SC-153</h2>
+<p class="meta"><b>成分/INCI：</b>巨藻（MACROCYSTIS PYRIFERA）提取物　<b>供应商：</b>青岛海大</p>
+<p>育发&amp;头皮护理，唤醒毛囊、重塑发根生长力</p>
+</article>
+<h2 class="sub-head" id="sub-1">洗发护发·调理修护<span class="n">7 款</span></h2>
 <article class="pcard" id="p138">
 <h2>CATINAL HC-100 / HC-200</h2>
 <p class="meta"><b>成分/INCI：</b>聚季铵盐-10（阳离子纤维素）　<b>供应商：</b>东邦</p>
@@ -94,22 +118,12 @@ footer .wrap{border-top:1px solid var(--line);padding-top:16px}
 <p class="meta"><b>成分/INCI：</b>麦芽寡糖葡糖苷、氢化淀粉水解物　<b>供应商：</b>苏州奥氏</p>
 <p>保湿护肤+细泡稳泡；发用抗静电、保护毛发、改善光泽、修护染烫损伤</p>
 </article>
-<article class="pcard" id="p144">
-<h2>HOLL'S®HOA50</h2>
-<p class="meta"><b>成分/INCI：</b>水解燕麦、麦芽寡糖葡糖苷等　<b>供应商：</b>苏州奥氏</p>
-<p>多糖降低刺激，增泡稳泡；绿色高效解决头痒头屑</p>
-</article>
-<article class="pcard" id="p145">
-<h2>OLGOSEA 奥丽格思 SC-153</h2>
-<p class="meta"><b>成分/INCI：</b>巨藻（MACROCYSTIS PYRIFERA）提取物　<b>供应商：</b>青岛海大</p>
-<p>育发&amp;头皮护理，唤醒毛囊、重塑发根生长力</p>
-</article>
 <article class="pcard" id="p146">
 <h2>大米水解蛋白 FCS1</h2>
 <p class="meta"><b>成分/INCI：</b>水解大米蛋白　<b>供应商：</b>无锡金农</p>
 <p>酶解小分子肽+氨基酸，发束测试验证，发用修护调理</p>
 </article>
-</section>
+</div><aside class="sidenav" aria-label="品类细分导航"><div class="sn-box"><p class="sn-t">本页细分 · 按应用场景</p><a href="#sub-0"><span>头皮护理·育发去屑</span><span class="n">2 款</span></a><a href="#sub-1"><span>洗发护发·调理修护</span><span class="n">7 款</span></a><p class="sn-t">全部品类</p><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/surfactants/"><span>表面活性剂（清洁/发泡）</span><span class="n">32 款</span></a><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/emulsifiers/"><span>乳化剂</span><span class="n">21 款</span></a><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/emollient-esters/"><span>润肤油脂（合成酯/烃类）</span><span class="n">48 款</span></a><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/natural-oils/"><span>天然植物油脂</span><span class="n">10 款</span></a><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/humectants/"><span>保湿剂</span><span class="n">22 款</span></a><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/thickeners/"><span>增稠剂/流变调节/悬浮稳定</span><span class="n">6 款</span></a><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/hair-conditioning/"><span>发用调理剂 <b style="color:var(--brand)">·</b></span><span class="n">9 款</span></a><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/actives/"><span>功效活性物</span><span class="n">53 款</span></a><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/uv-filters/"><span>防晒剂（紫外线吸收剂）</span><span class="n">4 款</span></a><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/preservatives/"><span>防腐剂与防腐辅助</span><span class="n">2 款</span></a><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/powders/"><span>粉体与肤感调节</span><span class="n">2 款</span></a><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/functional-additives/"><span>功能助剂（分散/成膜/溶剂/中和）</span><span class="n">4 款</span></a><p class="sn-t">按配方问题</p><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/"><span>功效方案 · 15个方向</span><span class="n">›</span></a></div></aside></div></section>
 
   <section aria-labelledby="contact">
     <div class="contact" id="contact">
@@ -192,6 +206,15 @@ footer .wrap{border-top:1px solid var(--line);padding-top:16px}
   }
  ]
 }
+</script>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var t=document.getElementById(a.getAttribute('href').slice(1));
+    if(t){t.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'',a.getAttribute('href'));}
+  });
+});
 </script>
 </main>
 <footer><div class="wrap"><p>© 2026 赋铖生物科技（上海）有限公司 · 产品信息以各供应商最新 TDS 为准，法规信息以《已使用化妆品原料目录（2021年版）》及《化妆品安全技术规范》为准。</p></div></footer>

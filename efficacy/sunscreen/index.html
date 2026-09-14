@@ -48,10 +48,22 @@ footer{padding:26px 0 40px;color:var(--sub);font-size:13px}
 footer .wrap{border-top:1px solid var(--line);padding-top:16px}
 .idx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
 .idx-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
-.idx-card h3{margin:0 0 6px;font-size:16px}
+.idx-card h2{margin:0 0 6px;font-size:16px;border:none;padding:0}
 .idx-card p{margin:0;color:var(--sub);font-size:14px}
 .idx-card .n{color:var(--green);font-weight:700;font-size:13px}
-@media print{.topbar nav,footer{display:none}.pcard,.idx-card{break-inside:avoid}}
+/* 品类页：左侧分组产品 + 右侧吸顶细分导航 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:22px;align-items:start}
+.sidenav{position:sticky;top:14px}
+.sn-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;max-height:calc(100vh - 40px);overflow:auto}
+.sn-t{font-size:12px;color:var(--sub);margin:10px 0 4px;font-weight:700;letter-spacing:.5px}
+.sn-t:first-child{margin-top:0}
+.sn-box a{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:13.5px;padding:5px 0;border-bottom:1px dashed var(--line);line-height:1.4}
+.sn-box a .n{color:var(--green);font-size:12px;white-space:nowrap}
+.sub-head{margin:26px 0 12px;font-size:18px;border-left:4px solid var(--brand);padding-left:10px}
+.sub-head:first-child{margin-top:0}
+.sub-head .n{color:var(--sub);font-size:13px;font-weight:400;margin-left:8px}
+@media(max-width:960px){.layout{grid-template-columns:1fr}.sidenav{position:static;order:-1}.sn-box{max-height:none}}
+@media print{.topbar nav,footer,.sidenav{display:none}.pcard,.idx-card{break-inside:avoid}}
 </style>
 </head>
 <body>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>化妆品原料产品库 | 赋铖生物</title>
-<meta name="description" content="赋铖生物212款化妆品原料产品库：表面活性剂、乳化剂、润肤油脂、天然植物油脂、保湿剂、增稠剂、发用调理剂、功效活性物、防晒剂等12大类。">
+<meta name="description" content="赋铖生物213款化妆品原料产品库：表面活性剂、乳化剂、润肤油脂、天然植物油脂、保湿剂、增稠剂、发用调理剂、功效活性物、防晒剂等12大类。">
 <meta property="og:site_name" content="赋铖生物科技（上海）有限公司">
 <meta property="og:title" content="化妆品原料产品库 | 赋铖生物">
 <style>
@@ -48,10 +48,22 @@ footer{padding:26px 0 40px;color:var(--sub);font-size:13px}
 footer .wrap{border-top:1px solid var(--line);padding-top:16px}
 .idx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
 .idx-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
-.idx-card h3{margin:0 0 6px;font-size:16px}
+.idx-card h2{margin:0 0 6px;font-size:16px;border:none;padding:0}
 .idx-card p{margin:0;color:var(--sub);font-size:14px}
 .idx-card .n{color:var(--green);font-weight:700;font-size:13px}
-@media print{.topbar nav,footer{display:none}.pcard,.idx-card{break-inside:avoid}}
+/* 品类页：左侧分组产品 + 右侧吸顶细分导航 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:22px;align-items:start}
+.sidenav{position:sticky;top:14px}
+.sn-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;max-height:calc(100vh - 40px);overflow:auto}
+.sn-t{font-size:12px;color:var(--sub);margin:10px 0 4px;font-weight:700;letter-spacing:.5px}
+.sn-t:first-child{margin-top:0}
+.sn-box a{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:13.5px;padding:5px 0;border-bottom:1px dashed var(--line);line-height:1.4}
+.sn-box a .n{color:var(--green);font-size:12px;white-space:nowrap}
+.sub-head{margin:26px 0 12px;font-size:18px;border-left:4px solid var(--brand);padding-left:10px}
+.sub-head:first-child{margin-top:0}
+.sub-head .n{color:var(--sub);font-size:13px;font-weight:400;margin-left:8px}
+@media(max-width:960px){.layout{grid-template-columns:1fr}.sidenav{position:static;order:-1}.sn-box{max-height:none}}
+@media print{.topbar nav,footer,.sidenav{display:none}.pcard,.idx-card{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -61,20 +73,20 @@ footer .wrap{border-top:1px solid var(--line);padding-top:16px}
 </div></header>
 <main class="wrap">
 <p class="crumb"><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/">首页</a> › 产品库</p>
-<div class="hero"><h1>产品库 · 212 款原料全览</h1><p class="lead">按 12 大品类浏览全部在售原料。如果你是从配方问题出发（比如"敏感肌用什么""口红用什么蜡"），建议先看 <a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/">功效方案页</a>。</p></div>
+<div class="hero"><h1>产品库 · 213 款原料全览</h1><p class="lead">按 12 大品类浏览全部在售原料，品类页内已按应用场景（护肤 / 彩妆 / 洗护 / 防晒等）进一步细分。如果你是从配方问题出发（比如"敏感肌用什么""口红用什么蜡"），建议先看 <a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/efficacy/">功效方案页</a>。</p></div>
 <section><div class="idx-grid">
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/surfactants/">表面活性剂（清洁/发泡）</a></h3><p><span class="n">32 款</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/emulsifiers/">乳化剂</a></h3><p><span class="n">21 款</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/emollient-esters/">润肤油脂（合成酯/烃类）</a></h3><p><span class="n">48 款</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/natural-oils/">天然植物油脂</a></h3><p><span class="n">10 款</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/humectants/">保湿剂</a></h3><p><span class="n">22 款</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/thickeners/">增稠剂/流变调节/悬浮稳定</a></h3><p><span class="n">6 款</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/hair-conditioning/">发用调理剂</a></h3><p><span class="n">9 款</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/actives/">功效活性物</a></h3><p><span class="n">53 款</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/uv-filters/">防晒剂（紫外线吸收剂）</a></h3><p><span class="n">4 款</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/preservatives/">防腐剂与防腐辅助</a></h3><p><span class="n">2 款</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/powders/">粉体与肤感调节</a></h3><p><span class="n">2 款</span></p></div>
-<div class="idx-card"><h3><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/functional-additives/">功能助剂（分散/成膜/溶剂/中和）</a></h3><p><span class="n">4 款</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/surfactants/">表面活性剂（清洁/发泡）</a></h2><p><span class="n">32 款</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/emulsifiers/">乳化剂</a></h2><p><span class="n">21 款</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/emollient-esters/">润肤油脂（合成酯/烃类）</a></h2><p><span class="n">48 款</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/natural-oils/">天然植物油脂</a></h2><p><span class="n">10 款</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/humectants/">保湿剂</a></h2><p><span class="n">22 款</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/thickeners/">增稠剂/流变调节/悬浮稳定</a></h2><p><span class="n">6 款</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/hair-conditioning/">发用调理剂</a></h2><p><span class="n">9 款</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/actives/">功效活性物</a></h2><p><span class="n">53 款</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/uv-filters/">防晒剂（紫外线吸收剂）</a></h2><p><span class="n">4 款</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/preservatives/">防腐剂与防腐辅助</a></h2><p><span class="n">2 款</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/powders/">粉体与肤感调节</a></h2><p><span class="n">2 款</span></p></div>
+<div class="idx-card"><h2><a target="_blank" rel="noopener noreferrer" href="https://futurebio.github.io/products/functional-additives/">功能助剂（分散/成膜/溶剂/中和）</a></h2><p><span class="n">4 款</span></p></div>
 </div></section>
 
   <section aria-labelledby="contact">
