@@ -91,10 +91,24 @@ tr:hover td.rowh-h{color:var(--blue)}
 .mx th.rowh a{color:inherit;text-decoration:none}
 .mx th.rowh a:hover{color:var(--blue);text-decoration:underline}
 @media print{.topnav,.subnav-card{display:none}}
+.topnav{box-shadow:0 8px 28px rgba(21,32,51,.06);backdrop-filter:saturate(150%) blur(12px)}
+.tn-brand,.tn-links button{font:inherit;cursor:pointer}
+.tn-brand{border:0;background:transparent;color:var(--ink);padding:6px 2px;font-size:13px;font-weight:800}
+.tn-brand:hover{color:var(--blue)}
+.tn-links button{font-size:12.5px;font-weight:700;color:var(--blue);background:#EEF3FF;border:1px solid #D8E3FF;border-radius:20px;padding:5px 13px;transition:background .15s ease,color .15s ease,border-color .15s ease,box-shadow .15s ease}
+.tn-links button:hover{background:#DCE7FF;border-color:#B9CCFF}
+.tn-links button.is-active{color:#fff;background:var(--blue);border-color:var(--blue);box-shadow:0 5px 14px rgba(47,107,255,.22)}
+.site-view[hidden]{display:none!important}
+.spa-remote{max-width:1440px;margin:0 auto;min-height:72vh;background:var(--bg)}
+.frame-status{max-width:1400px;margin:20px auto;padding:16px 20px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--muted);font-size:13px}
+#contentFrame{display:block;width:100%;min-height:760px;border:0;background:var(--bg)}
+@media (max-width:720px){.topnav .tn-in{align-items:flex-start}.tn-links{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}.tn-links button{white-space:nowrap}.spa-remote{min-height:80vh}}
+@media print{.spa-remote{display:none!important}}
 </style>
 </head>
 <body>
-<div class="topnav"><div class="tn-in"><span class="tn-brand">赋铖生物 · 产品矩阵</span><span class="tn-links"><a href="https://futurebio.github.io/products/" target="_blank" rel="noopener noreferrer">产品库213款</a><a href="https://futurebio.github.io/efficacy/" target="_blank" rel="noopener noreferrer">按功效找原料</a><a href="https://futurebio.github.io/chitosan/" target="_blank" rel="noopener noreferrer">壳聚糖专题</a></span></div></div>
+<div class="topnav"><div class="tn-in"><button class="tn-brand nav-view is-active" type="button" data-view="matrix" aria-pressed="true">赋铖生物 · 产品矩阵</button><span class="tn-links" role="navigation" aria-label="站内栏目"><button class="nav-view" type="button" data-view="products" data-path="products/" aria-pressed="false">产品库213款</button><button class="nav-view" type="button" data-view="efficacy" data-path="efficacy/" aria-pressed="false">按功效找原料</button><button class="nav-view" type="button" data-view="chitosan" data-path="chitosan/" aria-pressed="false">壳聚糖专题</button></span></div></div>
+<section id="matrixView" class="site-view">
 <main class="wrap">
   <header class="page-head">
     <p class="kicker">Future Biotech · Product Matrix</p>
@@ -192,5 +206,116 @@ sres.addEventListener('click',e=>{
 });
 </script>
 <footer style="margin-top:28px;padding:18px 20px;border-top:1px solid #E6EAF2;color:#5B6B8C;font-size:14px;text-align:center">赋铖生物科技（上海）有限公司 · 电话/微信 17375457376 ｜ 上海市静安区天目中路585号新梅大厦612室</footer>
+</section>
+<section id="remoteView" class="site-view spa-remote" hidden aria-live="polite">
+  <div class="frame-status" id="frameStatus">正在加载站内内容…</div>
+  <iframe id="contentFrame" title="赋铖生物站内内容"></iframe>
+</section>
+<script>
+(()=>{
+  const matrixView=document.getElementById('matrixView');
+  const remoteView=document.getElementById('remoteView');
+  const frame=document.getElementById('contentFrame');
+  const status=document.getElementById('frameStatus');
+  const controls=[...document.querySelectorAll('.nav-view')];
+  const labels={products:'产品库213款',efficacy:'按功效找原料',chitosan:'壳聚糖专题'};
+  let currentView='matrix';
+  let resizeObserver=null;
+
+  function localUrl(path){return new URL(path.replace(/^\/+/,''),document.baseURI).href;}
+  function setActive(view){
+    controls.forEach(btn=>{
+      const active=btn.dataset.view===view;
+      btn.classList.toggle('is-active',active);
+      btn.setAttribute('aria-pressed',String(active));
+    });
+  }
+  function resizeFrame(){
+    try{
+      const doc=frame.contentDocument;
+      if(!doc)return;
+      const height=Math.max(doc.body?.scrollHeight||0,doc.documentElement?.scrollHeight||0,760);
+      frame.style.height=height+'px';
+    }catch(_){frame.style.height='1000px';}
+  }
+  function prepareFrame(){
+    let doc;
+    try{doc=frame.contentDocument;}catch(_){status.hidden=true;return;}
+    if(!doc)return;
+    doc.querySelectorAll('.topnav,.topbar').forEach(nestedNav=>nestedNav.style.display='none');
+    doc.querySelectorAll('a[href]').forEach(link=>{
+      let url;
+      try{url=new URL(link.href,frame.contentWindow.location.href);}catch(_){return;}
+      if(url.origin===location.origin||location.protocol==='file:'){
+        link.removeAttribute('target');
+        link.removeAttribute('rel');
+      }
+    });
+    doc.addEventListener('click',event=>{
+      const link=event.target.closest('a[href]');
+      if(!link)return;
+      let url;
+      try{url=new URL(link.href,frame.contentWindow.location.href);}catch(_){return;}
+      if(url.origin!==location.origin&&location.protocol!=='file:')return;
+      const path=url.pathname.replace(/^\/+/, '');
+      const view=path.startsWith('products/')?'products':path.startsWith('efficacy/')?'efficacy':path.startsWith('chitosan/')?'chitosan':path?'': 'matrix';
+      if(!view)return;
+      event.preventDefault();
+      showView(view,view==='matrix'?'':path+(url.hash||''));
+    });
+    status.hidden=true;
+    resizeFrame();
+    if(resizeObserver)resizeObserver.disconnect();
+    if('ResizeObserver' in window&&doc.body){
+      resizeObserver=new ResizeObserver(resizeFrame);
+      resizeObserver.observe(doc.body);
+    }
+    setTimeout(resizeFrame,250);
+  }
+  function showView(view,path,{history=true,scroll=true}={}){
+    currentView=view;
+    setActive(view);
+    const matrix=view==='matrix';
+    matrixView.hidden=!matrix;
+    remoteView.hidden=matrix;
+    if(matrix){
+      frame.removeAttribute('src');
+      status.hidden=true;
+    }else{
+      const next=localUrl(path||view+'/');
+      status.textContent='正在加载'+(labels[view]||'站内内容')+'…';
+      status.hidden=false;
+      if(frame.src!==next)frame.src=next;
+    }
+    if(history){
+      const nextHash=matrix?'#matrix':'#'+view;
+      if(location.hash!==nextHash)window.history.pushState({view,path},'',nextHash);
+    }
+    if(scroll)window.scrollTo({top:0,behavior:'smooth'});
+  }
+  controls.forEach(btn=>btn.addEventListener('click',()=>showView(btn.dataset.view,btn.dataset.path)));
+  document.addEventListener('click',event=>{
+    const link=event.target.closest('a[href]');
+    if(!link||!matrixView.contains(link))return;
+    let url;
+    try{url=new URL(link.href);}catch(_){return;}
+    const path=url.pathname.replace(/^\/+/, '');
+    const view=path.startsWith('products/')?'products':path.startsWith('efficacy/')?'efficacy':path.startsWith('chitosan/')?'chitosan':null;
+    if(!view)return;
+    event.preventDefault();
+    showView(view,path+(url.hash||''));
+  });
+  frame.addEventListener('load',prepareFrame);
+  window.addEventListener('popstate',event=>{
+    const state=event.state||{};
+    const view=state.view||location.hash.slice(1)||'matrix';
+    const control=controls.find(btn=>btn.dataset.view===view);
+    showView(control?view:'matrix',state.path||(control&&control.dataset.path),{history:false,scroll:false});
+  });
+  const initial=location.hash.slice(1);
+  const initialControl=controls.find(btn=>btn.dataset.view===initial);
+  showView(initialControl?initial:'matrix',initialControl&&initialControl.dataset.path,{history:false,scroll:false});
+})();
+</script>
 </body>
 </html>
