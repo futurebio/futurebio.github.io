@@ -1,12 +1,16 @@
 (() => {
-  const prioritySuppliers = ['无锡金农', '青岛海大', '苏州奥氏', '联合宝莹'];
+  const prioritySuppliers = ['无锡金农', '青岛海大', '植物油', '中科菁萃'];
   const priorityKeywords = [
     '壳聚糖',
     '脱乙酰壳多糖',
-    '愈创薁',
-    '愈创木薁磺酸钠',
-    '愈创蓝油汀',
-    '薁磺酸钠'
+    "HOLL'S®APL35",
+    "HOLL'S®OAT35",
+    "HOLL'S®POP35",
+    "HOLL'S®SWP",
+    "HOLL'S®HOA50",
+    "HOLL'S®MG60",
+    "HOLL'S®SUPER R20",
+    "HOLL'S®SMCT41"
   ];
 
   const isPriority = text => {
