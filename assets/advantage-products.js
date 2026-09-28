@@ -19,6 +19,30 @@
       priorityKeywords.some(name => value.includes(name));
   };
 
+  const normalizeManufacturerLabels = () => {
+    const walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode: node => {
+          if (!/供应商|其他产品/.test(node.nodeValue || '')) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          return node.parentElement?.closest('script,style,noscript,textarea')
+            ? NodeFilter.FILTER_REJECT
+            : NodeFilter.FILTER_ACCEPT;
+        }
+      }
+    );
+    const matches = [];
+    while (walker.nextNode()) matches.push(walker.currentNode);
+    matches.forEach(node => {
+      node.nodeValue = node.nodeValue
+        .replaceAll('供应商', '生产商')
+        .replaceAll('其他产品', '赋铖生物');
+    });
+  };
+
   const appendBadge = (target, label = '★ 优势产品') => {
     if (!target || target.querySelector(':scope > .advantage-badge')) return;
     const badge = document.createElement('span');
@@ -63,6 +87,7 @@
   };
 
   const refresh = () => {
+    normalizeManufacturerLabels();
     markVisibleProducts();
     markChitosanTopic();
   };
