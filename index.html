@@ -109,7 +109,7 @@ tr:hover td.rowh-h{color:var(--blue)}
 <link rel="stylesheet" href="/assets/advantage-products.css">
 </head>
 <body>
-<div class="topnav"><div class="tn-in"><button class="tn-brand nav-view is-active" type="button" data-view="matrix" aria-pressed="true">赋铖生物 · 产品矩阵</button><span class="tn-links" role="navigation" aria-label="站内栏目"><button class="nav-view" type="button" data-view="products" data-path="products/" aria-pressed="false">产品库213款</button><button class="nav-view" type="button" data-view="efficacy" data-path="efficacy/" aria-pressed="false">按功效找原料</button><button class="nav-view" type="button" data-view="chitosan" data-path="chitosan/" aria-pressed="false">壳聚糖专题</button><button class="nav-view" type="button" data-view="rice" data-path="rice/" aria-pressed="false">大米衍生物专题</button></span></div></div>
+<div class="topnav"><div class="tn-in"><button class="tn-brand nav-view is-active" type="button" data-view="matrix" aria-pressed="true">赋铖生物 · 产品矩阵</button><span class="tn-links" role="navigation" aria-label="站内栏目"><button class="nav-view" type="button" data-view="products" data-path="products/" aria-pressed="false">产品库213款</button><button class="nav-view" type="button" data-view="efficacy" data-path="efficacy/" aria-pressed="false">按功效找原料</button><button class="nav-view" type="button" data-view="chitosan" data-path="chitosan/" aria-pressed="false">壳聚糖专题</button><button class="nav-view" type="button" data-view="rice" data-path="rice/" aria-pressed="false">大米衍生物专题</button><button class="nav-view" type="button" data-view="haida" data-path="qingdao-haida/" aria-pressed="false">青岛海大专题</button><button class="nav-view" type="button" data-view="yutai" data-path="xian-yutai/" aria-pressed="false">西安宇泰专题</button><button class="nav-view" type="button" data-view="baoying" data-path="lianhe-baoying/" aria-pressed="false">联合宝莹专题</button><button class="nav-view" type="button" data-view="jingcui" data-path="zhongke-jingcui/" aria-pressed="false">中科菁萃专题</button></span></div></div>
 <section id="matrixView" class="site-view">
 <main class="wrap">
   <div class="card search-card">
@@ -208,7 +208,7 @@ sres.addEventListener('click',e=>{
   const frame=document.getElementById('contentFrame');
   const status=document.getElementById('frameStatus');
   const controls=[...document.querySelectorAll('.nav-view')];
-  const labels={products:'产品库213款',efficacy:'按功效找原料',chitosan:'壳聚糖专题',rice:'大米衍生物专题'};
+  const labels={products:'产品库213款',efficacy:'按功效找原料',chitosan:'壳聚糖专题',rice:'大米衍生物专题',haida:'青岛海大专题',yutai:'西安宇泰专题',baoying:'联合宝莹专题',jingcui:'中科菁萃专题'};
   let currentView='matrix';
   let resizeObserver=null;
 
@@ -248,7 +248,7 @@ sres.addEventListener('click',e=>{
       try{url=new URL(link.href,frame.contentWindow.location.href);}catch(_){return;}
       if(url.origin!==location.origin&&location.protocol!=='file:')return;
       const path=url.pathname.replace(/^\/+/, '');
-      const view=path.startsWith('products/')?'products':path.startsWith('efficacy/')?'efficacy':path.startsWith('chitosan/')?'chitosan':path.startsWith('rice/')?'rice':path?'': 'matrix';
+      const view=path.startsWith('products/')?'products':path.startsWith('efficacy/')?'efficacy':path.startsWith('chitosan/')?'chitosan':path.startsWith('rice/')?'rice':path.startsWith('qingdao-haida/')?'haida':path.startsWith('xian-yutai/')?'yutai':path.startsWith('lianhe-baoying/')?'baoying':path.startsWith('zhongke-jingcui/')?'jingcui':path?'': 'matrix';
       if(!view)return;
       event.preventDefault();
       showView(view,view==='matrix'?'':path+(url.hash||''));
@@ -290,7 +290,7 @@ sres.addEventListener('click',e=>{
     let url;
     try{url=new URL(link.href);}catch(_){return;}
     const path=url.pathname.replace(/^\/+/, '');
-    const view=path.startsWith('products/')?'products':path.startsWith('efficacy/')?'efficacy':path.startsWith('chitosan/')?'chitosan':path.startsWith('rice/')?'rice':null;
+    const view=path.startsWith('products/')?'products':path.startsWith('efficacy/')?'efficacy':path.startsWith('chitosan/')?'chitosan':path.startsWith('rice/')?'rice':path.startsWith('qingdao-haida/')?'haida':path.startsWith('xian-yutai/')?'yutai':path.startsWith('lianhe-baoying/')?'baoying':path.startsWith('zhongke-jingcui/')?'jingcui':null;
     if(!view)return;
     event.preventDefault();
     showView(view,path+(url.hash||''));
