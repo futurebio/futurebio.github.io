@@ -74,8 +74,8 @@
     });
   };
 
-  const markChitosanTopic = () => {
-    if (!location.pathname.includes('/chitosan/')) return;
+  const markAdvantageTopic = () => {
+    if (!location.pathname.includes('/chitosan/') && !location.pathname.includes('/rice/')) return;
     const hero = document.querySelector('.hero');
     const heading = hero?.querySelector('h1');
     if (!hero || !heading || hero.classList.contains('advantage-topic')) return;
@@ -89,7 +89,7 @@
   const refresh = () => {
     normalizeManufacturerLabels();
     markVisibleProducts();
-    markChitosanTopic();
+    markAdvantageTopic();
   };
 
   let scheduled = false;
