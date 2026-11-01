@@ -1,5 +1,5 @@
 (() => {
-  const prioritySuppliers = ['无锡金农', '青岛海大', '植物油', '中科菁萃'];
+  const prioritySuppliers = ['无锡金农', '青岛海大', '西安宇泰', '联合宝莹', '植物油', '中科菁萃'];
   const priorityKeywords = [
     '壳聚糖',
     '脱乙酰壳多糖',
@@ -75,7 +75,8 @@
   };
 
   const markAdvantageTopic = () => {
-    if (!location.pathname.includes('/chitosan/') && !location.pathname.includes('/rice/')) return;
+    const topicPaths = ['/chitosan/', '/rice/', '/qingdao-haida/', '/xian-yutai/', '/lianhe-baoying/', '/zhongke-jingcui/'];
+    if (!topicPaths.some(path => location.pathname.includes(path))) return;
     const hero = document.querySelector('.hero');
     const heading = hero?.querySelector('h1');
     if (!hero || !heading || hero.classList.contains('advantage-topic')) return;
