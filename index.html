@@ -98,20 +98,47 @@ tr:hover td.rowh-h{color:var(--blue)}
 .tn-links button{font-size:12.5px;font-weight:700;color:var(--blue);background:#EEF3FF;border:1px solid #D8E3FF;border-radius:20px;padding:5px 13px;transition:background .15s ease,color .15s ease,border-color .15s ease,box-shadow .15s ease}
 .tn-links button:hover{background:#DCE7FF;border-color:#B9CCFF}
 .tn-links button.is-active{color:#fff;background:var(--blue);border-color:var(--blue);box-shadow:0 5px 14px rgba(47,107,255,.22)}
+.track-hub{margin-top:16px;padding:16px 18px;background:linear-gradient(120deg,#F5F8FF 0%,#FFFFFF 58%,#F1FBF8 100%)}
+.track-hub-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:12px}
+.track-hub-title{display:flex;align-items:center;gap:10px}
+.track-hub-title h2{font-size:15px;font-weight:800}
+.track-hub-title .eyebrow{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--blue);background:#EAF0FF;border:1px solid #D5E1FF;border-radius:999px;padding:2px 8px}
+.track-hub-head p{font-size:12px;color:var(--muted)}
+.track-list{display:flex;gap:10px;overflow-x:auto;padding:1px 1px 4px;scrollbar-width:thin}
+.track-entry{flex:0 0 auto;min-width:252px;border:1px solid #C9D8FF;border-radius:12px;background:#fff;padding:12px 14px;display:flex;align-items:center;gap:12px;text-align:left;color:var(--ink);font:inherit;cursor:pointer;box-shadow:0 7px 20px rgba(47,107,255,.08);transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+.track-entry:hover{transform:translateY(-2px);border-color:#7EA2FF;box-shadow:0 10px 26px rgba(47,107,255,.14)}
+.track-icon{display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;border-radius:11px;background:linear-gradient(135deg,#2F6BFF,#7557E8);color:#fff;font-size:18px}
+.track-copy{display:block;min-width:0}
+.track-name{display:block;font-size:14px;font-weight:800;line-height:1.25}
+.track-desc{display:block;margin-top:3px;font-size:11px;color:var(--muted);white-space:nowrap}
+.track-arrow{margin-left:auto;color:var(--blue);font-size:17px;font-weight:800}
 .site-view[hidden]{display:none!important}
 .spa-remote{max-width:1440px;margin:0 auto;min-height:72vh;background:var(--bg)}
 .frame-status{max-width:1400px;margin:20px auto;padding:16px 20px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--muted);font-size:13px}
 #contentFrame{display:block;width:100%;min-height:760px;border:0;background:var(--bg)}
-@media (max-width:720px){.topnav .tn-in{align-items:flex-start}.tn-links{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}.tn-links button{white-space:nowrap}.spa-remote{min-height:80vh}}
+@media (max-width:720px){.topnav .tn-in{align-items:flex-start}.tn-links{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}.tn-links button{white-space:nowrap}.track-hub{padding:14px}.track-hub-head{display:block;margin-bottom:10px}.track-hub-head p{margin-top:3px}.track-entry{min-width:238px}.spa-remote{min-height:80vh}}
 @media print{.spa-remote{display:none!important}}
 </style>
 <link rel="stylesheet" href="/assets/site-polish.css">
 <link rel="stylesheet" href="/assets/advantage-products.css">
 </head>
 <body>
-<div class="topnav"><div class="tn-in"><button class="tn-brand nav-view is-active" type="button" data-view="matrix" aria-pressed="true">赋铖生物 · 产品矩阵</button><span class="tn-links" role="navigation" aria-label="站内栏目"><button class="nav-view" type="button" data-view="products" data-path="products/" aria-pressed="false">产品库213款</button><button class="nav-view" type="button" data-view="efficacy" data-path="efficacy/" aria-pressed="false">按功效找原料</button><button class="nav-view" type="button" data-view="antiaging" data-path="anti-aging/" aria-pressed="false">抗衰赛道</button><button class="nav-view" type="button" data-view="chitosan" data-path="chitosan/" aria-pressed="false">壳聚糖专题</button><button class="nav-view" type="button" data-view="rice" data-path="rice/" aria-pressed="false">大米衍生物专题</button><button class="nav-view" type="button" data-view="haida" data-path="qingdao-haida/" aria-pressed="false">青岛海大专题</button><button class="nav-view" type="button" data-view="yutai" data-path="xian-yutai/" aria-pressed="false">西安宇泰专题</button><button class="nav-view" type="button" data-view="baoying" data-path="lianhe-baoying/" aria-pressed="false">联合宝莹专题</button><button class="nav-view" type="button" data-view="jingcui" data-path="zhongke-jingcui/" aria-pressed="false">中科菁萃专题</button></span></div></div>
+<div class="topnav"><div class="tn-in"><button class="tn-brand nav-view is-active" type="button" data-view="matrix" aria-pressed="true">赋铖生物 · 产品矩阵</button><span class="tn-links" role="navigation" aria-label="站内栏目"><button class="nav-view" type="button" data-view="products" data-path="products/" aria-pressed="false">产品库213款</button><button class="nav-view" type="button" data-view="efficacy" data-path="efficacy/" aria-pressed="false">按功效找原料</button><button class="nav-view" type="button" data-view="chitosan" data-path="chitosan/" aria-pressed="false">壳聚糖专题</button><button class="nav-view" type="button" data-view="rice" data-path="rice/" aria-pressed="false">大米衍生物专题</button><button class="nav-view" type="button" data-view="haida" data-path="qingdao-haida/" aria-pressed="false">青岛海大专题</button><button class="nav-view" type="button" data-view="yutai" data-path="xian-yutai/" aria-pressed="false">西安宇泰专题</button><button class="nav-view" type="button" data-view="baoying" data-path="lianhe-baoying/" aria-pressed="false">联合宝莹专题</button><button class="nav-view" type="button" data-view="jingcui" data-path="zhongke-jingcui/" aria-pressed="false">中科菁萃专题</button></span></div></div>
 <section id="matrixView" class="site-view">
 <main class="wrap">
+  <section class="card track-hub" aria-labelledby="trackHubTitle">
+    <div class="track-hub-head">
+      <div class="track-hub-title"><span class="eyebrow">TREND TRACKS</span><h2 id="trackHubTitle">赛道专区</h2></div>
+      <p>围绕市场趋势整合原料、机理与第三方功效证据，后续赛道将在此持续扩展。</p>
+    </div>
+    <div class="track-list" role="navigation" aria-label="功效赛道">
+      <button class="track-entry nav-view" type="button" data-view="antiaging" data-path="anti-aging/" aria-pressed="false">
+        <span class="track-icon" aria-hidden="true">✦</span>
+        <span class="track-copy"><span class="track-name">抗衰赛道</span><span class="track-desc">五维再生抗衰 · 原料组合 · 第三方证据</span></span>
+        <span class="track-arrow" aria-hidden="true">›</span>
+      </button>
+    </div>
+  </section>
   <div class="card search-card">
     <div class="search-row">
       <span class="sicon">🔍</span>
