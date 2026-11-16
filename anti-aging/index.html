@@ -1,135 +1,190 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>抗衰赛道｜证据驱动抗衰原料矩阵｜赋铖生物</title>
-<meta name="description" content="赋铖生物抗衰赛道：HWPDRN DDS、藻丽启源S57°、海洋寡糖ZnPro-II、油萃DA-L与大米蛋白肽FCT1，按再生信号、能量寿命、光氧化防御、炎性微环境与结构肽修护组织，并标注第三方报告和证据边界。">
-<style>
-:root{--bg:#071821;--panel:#0d2630;--panel2:#123640;--text:#eaf4f2;--muted:#91aaa8;--teal:#35e0c1;--teal2:#83f0dd;--blue:#60a5fa;--gold:#f4c66a;--coral:#ff7b6b;--violet:#a78bfa;--line:#264a51;--white:#fff}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Inter","PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1180px,calc(100% - 36px));margin:auto}
-.topbar{border-bottom:1px solid rgba(53,224,193,.18);background:rgba(7,24,33,.9);backdrop-filter:blur(14px);position:sticky;top:0;z-index:20}
-.topbar .wrap{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{font-size:14px;font-weight:800}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:500}
-.nav{display:flex;gap:8px;flex-wrap:wrap}.nav a{font-size:12px;color:var(--teal2);border:1px solid var(--line);border-radius:999px;padding:5px 11px}.nav a:hover{border-color:var(--teal);background:rgba(53,224,193,.08)}
-.hero{position:relative;overflow:hidden;padding:76px 0 58px;border-bottom:1px solid rgba(53,224,193,.14)}
-.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none}
-.hero:before{width:520px;height:520px;right:-130px;top:-210px;background:radial-gradient(circle,rgba(53,224,193,.24),rgba(53,224,193,0) 68%)}
-.hero:after{width:400px;height:400px;left:-250px;bottom:-230px;background:radial-gradient(circle,rgba(96,165,250,.18),rgba(96,165,250,0) 70%)}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--teal);font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.eyebrow:before{content:"";width:28px;height:2px;background:var(--teal)}
-h1{font-size:clamp(34px,6vw,66px);line-height:1.06;letter-spacing:-.04em;margin:22px 0 22px;max-width:890px}
-.gradient{background:linear-gradient(95deg,var(--teal2),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{max-width:800px;color:#bfd0ce;font-size:clamp(16px,2.1vw,20px);margin:0}
-.hero-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:42px;max-width:900px}
-.stat{border:1px solid var(--line);background:rgba(13,38,48,.74);border-radius:14px;padding:16px 18px}.stat b{display:block;font-size:24px;color:var(--teal2);font-family:Arial,sans-serif}.stat span{font-size:12px;color:var(--muted)}
-.section{padding:64px 0}.section.alt{background:#091d26;border-top:1px solid rgba(53,224,193,.08);border-bottom:1px solid rgba(53,224,193,.08)}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:26px}.section-head h2{font-size:clamp(27px,4vw,40px);line-height:1.18;margin:0}.section-head p{max-width:580px;color:var(--muted);margin:0;font-size:14px}
-.matrix{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
-.lane{position:relative;min-height:240px;border:1px solid var(--line);background:linear-gradient(180deg,var(--panel),#0a2029);border-radius:16px;padding:20px;overflow:hidden}.lane:after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;right:-34px;bottom:-34px;background:var(--accent);opacity:.12}.lane .no{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border-radius:10px;background:var(--accent);color:#06151c;font:800 13px Arial}.lane h3{font-size:20px;margin:24px 0 9px}.lane .product{font-size:15px;font-weight:800;color:var(--accent)}.lane p{font-size:12px;color:var(--muted);margin:12px 0 0}.lane.teal{--accent:var(--teal)}.lane.blue{--accent:var(--blue)}.lane.gold{--accent:var(--gold)}.lane.coral{--accent:var(--coral)}.lane.violet{--accent:var(--violet)}
-.rule{margin-top:18px;border:1px solid rgba(53,224,193,.42);background:rgba(53,224,193,.07);border-radius:14px;padding:18px 20px;color:var(--teal2);font-weight:700}
-.evidence-list{display:grid;gap:16px}
-.evidence{display:grid;grid-template-columns:230px minmax(0,1fr) 260px;gap:22px;align-items:stretch;border:1px solid var(--line);border-radius:18px;background:var(--panel);padding:22px}
-.identity{border-right:1px solid var(--line);padding-right:20px}.identity .track{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--accent)}.identity h3{font-size:24px;line-height:1.2;margin:9px 0 8px}.identity .maker{font-size:12px;color:var(--muted)}
-.badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}.badge{font-size:10px;font-weight:800;border:1px solid color-mix(in srgb,var(--accent) 55%,transparent);color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,transparent);border-radius:999px;padding:3px 8px}
-.evidence .body h4{font-size:14px;margin:0 0 8px;color:var(--teal2)}.evidence .body p{font-size:14px;color:#c4d3d1;margin:0}.evidence .body ul{margin:12px 0 0;padding-left:18px;color:var(--muted);font-size:13px}.evidence .body li+li{margin-top:4px}
-.metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.metric{background:#091d26;border:1px solid var(--line);border-radius:12px;padding:13px}.metric b{display:block;font:800 20px Arial;color:var(--accent)}.metric span{display:block;font-size:10px;color:var(--muted);margin-top:4px}.wide{grid-column:1/-1}
-.evidence.teal{--accent:var(--teal)}.evidence.blue{--accent:var(--blue)}.evidence.gold{--accent:var(--gold)}.evidence.coral{--accent:var(--coral)}.evidence.violet{--accent:var(--violet)}
-.boundary{margin-top:12px;color:#8ea4a2;font-size:11px;border-left:2px solid var(--accent);padding-left:9px}
-.levels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.level{border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:20px}.level b{display:flex;width:42px;height:42px;align-items:center;justify-content:center;border-radius:11px;background:var(--accent);color:#071821}.level h3{font-size:18px;margin:16px 0 6px}.level p{color:var(--muted);font-size:13px;margin:0}.level:nth-child(1){--accent:var(--teal)}.level:nth-child(2){--accent:var(--blue)}.level:nth-child(3){--accent:var(--violet)}.level:nth-child(4){--accent:var(--gold)}
-.excluded{margin-top:18px;border:1px dashed #50666b;border-radius:14px;padding:16px 18px;color:var(--muted);font-size:13px}.excluded strong{color:var(--text)}
-.cta{padding:58px 0 72px}.cta-card{position:relative;overflow:hidden;border:1px solid var(--teal);border-radius:22px;background:linear-gradient(135deg,#123640,#0b252e);padding:36px;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta-card:after{content:"";position:absolute;right:-80px;top:-100px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(53,224,193,.23),transparent 68%)}.cta h2{font-size:30px;margin:0 0 8px}.cta p{color:#b8ceca;margin:0}.contact{position:relative;z-index:1;display:flex;gap:10px;flex-wrap:wrap}.contact span,.contact a{border-radius:999px;padding:10px 16px;font-size:13px;font-weight:800}.contact span{background:var(--teal);color:#062029}.contact a{border:1px solid var(--line);color:var(--teal2)}
-footer{border-top:1px solid var(--line);padding:20px 0 34px;color:var(--muted);font-size:12px}
-@media(max-width:980px){.matrix{grid-template-columns:repeat(2,minmax(0,1fr))}.lane:last-child{grid-column:1/-1}.evidence{grid-template-columns:190px 1fr}.metrics{grid-column:1/-1}.levels{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:680px){.wrap{width:min(100% - 24px,1180px)}.topbar .wrap{padding:10px 0;align-items:flex-start}.nav{width:100%;overflow-x:auto;flex-wrap:nowrap}.nav a{white-space:nowrap}.hero{padding:48px 0 42px}.hero-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.section{padding:46px 0}.section-head{display:block}.section-head p{margin-top:10px}.matrix{grid-template-columns:1fr}.lane:last-child{grid-column:auto}.lane{min-height:190px}.evidence{grid-template-columns:1fr;padding:18px}.identity{border-right:0;border-bottom:1px solid var(--line);padding:0 0 16px}.metrics{grid-column:auto}.levels{grid-template-columns:1fr}.cta-card{display:block;padding:26px}.contact{margin-top:22px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>抗衰赛道｜五维再生抗衰原料平台｜赋铖生物</title>
+  <meta name="description" content="赋铖生物五维再生抗衰原料平台：围绕再生信号、能量寿命、光氧化防御、炎性微环境与结构肽修护，整合HWPDRN DDS、藻丽启源S57°、油萃DA-L、OLGOSEA ZnPro-II及大米蛋白肽FCT1的报告数据与配方思路。">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topbar"><div class="wrap">
-  <div class="brand">赋铖生物科技（上海）有限公司<small>证据驱动的化妆品原料解决方案</small></div>
-  <nav class="nav" aria-label="页内导航"><a href="#matrix">五维矩阵</a><a href="#evidence">报告原料</a><a href="#boundary">证据边界</a><a href="#contact">索取资料</a></nav>
-</div></header>
+<header class="topbar">
+  <div class="shell topbar-inner">
+    <a class="brand" href="/" aria-label="返回赋铖产品矩阵"><strong>FUTUREBIO</strong><span>赋铖生物 · 抗衰原料平台</span></a>
+    <nav class="nav" aria-label="页面导航"><a href="#upgrade">赛道升级</a><a href="#matrix">五维矩阵</a><a href="#ingredients">原料详解</a><a href="#reports">三方数据</a><a href="#formulas">组合配方</a></nav>
+    <a class="top-cta" href="#contact">索取资料</a>
+  </div>
+</header>
 
 <main>
-<section class="hero"><div class="wrap">
-  <span class="eyebrow">Anti-aging Track · 2026</span>
-  <h1>抗衰，不止补胶原<br><span class="gradient">把年轻机制重新上线</span></h1>
-  <p class="lead">围绕再生信号、能量寿命、光氧化防御、炎性微环境与结构肽修护，建立“原料事实—测试报告—人体证据—成品验证”可追溯的抗衰原料矩阵。</p>
-  <div class="hero-stats">
-    <div class="stat"><b>5</b><span>五维抗衰机制</span></div>
-    <div class="stat"><b>5</b><span>资料包核心原料</span></div>
-    <div class="stat"><b>4</b><span>含盖章/第三方检测原料</span></div>
-    <div class="stat"><b>1</b><span>人体功效原料</span></div>
-  </div>
-</div></section>
+  <section class="hero">
+    <div class="hero-media" aria-hidden="true"><img src="assets/hero.png" alt=""></div><div class="hero-shade"></div>
+    <div class="shell hero-inner">
+      <div class="hero-copy reveal">
+        <div class="kicker"><span></span>ANTI-AGING 2.0 · 2026</div>
+        <h1>抗衰，不止补胶原<br><em>让年轻机制重新上线</em></h1>
+        <p>从“单点抗皱”升级为“年轻稳态”：以递送、信号、能量、防御、微环境和结构重建构成一条可验证、可组合、可落地的抗衰链路。</p>
+        <div class="hero-actions"><a class="btn primary" href="#ingredients">查看核心原料</a><a class="btn ghost" href="#reports">查看报告数据</a></div>
+      </div>
+      <aside class="hero-panel reveal" aria-label="赛道核心信息">
+        <div class="hero-panel-label">EVIDENCE-FIRST PLATFORM</div>
+        <div class="hero-number"><b>5</b><span>大机制赛道</span></div><div class="hero-number"><b>5</b><span>款核心原料</span></div><div class="hero-number"><b>15</b><span>份报告证据页</span></div>
+        <p>所有数字均保留测试对象、浓度、模型与周期；不同模型不横向换算强弱。</p>
+      </aside>
+    </div>
+    <div class="hero-foot"><span>再生信号</span><span>能量寿命</span><span>光氧化防御</span><span>炎性微环境</span><span>结构肽修护</span></div>
+  </section>
 
-<section class="section" id="matrix"><div class="wrap">
-  <div class="section-head"><h2>五维再生抗衰矩阵</h2><p>不是把产品堆在一起，而是把每款原料放回其最有证据支撑的机制位置；不同模型的数据不做直接强弱换算。</p></div>
-  <div class="matrix">
-    <article class="lane teal"><span class="no">01</span><h3>再生信号</h3><div class="product">HWPDRN® DDS</div><p>递送先行，覆盖 A2AR / EGFR / FGFR1 / COLIII。</p></article>
-    <article class="lane blue"><span class="no">02</span><h3>能量寿命</h3><div class="product">藻丽启源 S57°</div><p>ATP 与 UVB DNA 保护方向，补足线粒体抗衰叙事。</p></article>
-    <article class="lane gold"><span class="no">03</span><h3>光氧化防御</h3><div class="product">油萃 DA-L</div><p>油溶岩藻黄素，适配油相抗氧化与抗光老化概念。</p></article>
-    <article class="lane coral"><span class="no">04</span><h3>炎性微环境</h3><div class="product">OLGOSEA ZnPro-II</div><p>透皮、舒缓、抗炎与微循环，做“降噪型抗衰”。</p></article>
-    <article class="lane violet"><span class="no">05</span><h3>结构肽修护</h3><div class="product">大米蛋白肽 FCT1</div><p>28天人体保湿、皱纹、弹性与紧致度证据。</p></article>
-  </div>
-  <div class="rule">组合逻辑：递送先行 → 信号启动 → 能量供给 → 环境降噪 → 结构重建</div>
-</div></section>
+  <section class="section section-dark" id="upgrade"><div class="shell">
+    <div class="section-intro reveal"><div><span class="section-no">01</span><span class="eyebrow">ANTI-AGING UPGRADE</span></div><h2>从“解决一条纹”到<br>维持一套年轻稳态</h2><p>消费者看到的是皱纹、松弛与暗沉，配方端面对的却是递送效率、能量下降、氧化压力、慢性炎性环境与基质结构变化的叠加。</p></div>
+    <div class="upgrade-grid">
+      <article class="upgrade-card reveal"><span>01</span><h3>单点抗皱</h3><p>围绕胶原表达或即时填充，故事清楚，但难以解释复杂老化过程。</p><small>单一指标</small></article>
+      <article class="upgrade-card reveal"><span>02</span><h3>通路协同</h3><p>将信号、抗氧化、舒缓和结构修护组合，但需要更清楚的证据分层。</p><small>多靶点组合</small></article>
+      <article class="upgrade-card active reveal"><span>03</span><h3>年轻稳态</h3><p>机制 × 递送 × 人体 × 配方，形成能被品牌复用的完整产品资产。</p><small>可验证平台</small></article>
+    </div>
+    <div class="turning-point reveal"><b>核心转变</b><span>不是把皱纹“压下去”</span><i>→</i><strong>而是把年轻机制重新上线</strong></div>
+  </div></section>
 
-<section class="section alt" id="evidence"><div class="wrap">
-  <div class="section-head"><h2>有报告支撑的原料清单</h2><p>优先展示本次资料包中可以核对到盖章报告、第三方检测、人体报告或实验室测试的原料，并明确报告能证明什么。</p></div>
-  <div class="evidence-list">
-    <article class="evidence teal">
-      <div class="identity"><div class="track">REGENERATION SIGNAL</div><h3>HWPDRN® DDS</h3><div class="maker">上海辉文 · DNA钠递送体系</div><div class="badges"><span class="badge">6份盖章功效报告</span><span class="badge">离体透皮</span><span class="badge">重组全层皮肤</span></div></div>
-      <div class="body"><h4>报告覆盖</h4><p>巴马猪皮 Franz 扩散透皮，以及 A2AR、EGFR、FGFR1、COLIII 等重组全层皮肤模型测试。</p><ul><li>8h / 24h 累计渗透量高于普通 PDRN 对照</li><li>0.1%、8h 条件下覆盖四项信号与结构指标</li><li>另含原料安全评估、稳定性与应用配伍资料</li></ul><div class="boundary">模型结果用于机制与原料筛选，不直接等同于人体成品功效。</div></div>
-      <div class="metrics"><div class="metric"><b>+134.68%</b><span>8h 相对普通PDRN提升</span></div><div class="metric"><b>+162.84%</b><span>24h 相对普通PDRN提升</span></div><div class="metric"><b>+83.80%</b><span>FGFR1 表达</span></div><div class="metric"><b>+74.85%</b><span>COLIII 表达</span></div></div>
+  <section class="section" id="matrix"><div class="shell">
+    <div class="section-heading reveal"><div><span class="section-no">02</span><span class="eyebrow">FIVE-DIMENSIONAL MATRIX</span></div><h2>五维再生抗衰矩阵</h2><p>五款原料不是堆料，而是分别占据最有证据支撑的机制位置，再按剂型与客群进行组合。</p></div>
+    <div class="matrix-grid">
+      <a class="lane mint reveal" href="#pdrn"><span class="lane-no">01</span><div><small>REGENERATION</small><h3>再生信号</h3><b>HWPDRN® DDS</b><p>A2AR / EGFR / FGFR1 / COLIII</p></div></a>
+      <a class="lane blue reveal" href="#s57"><span class="lane-no">02</span><div><small>LONGEVITY</small><h3>能量寿命</h3><b>藻丽启源 S57°</b><p>ATP趋势 / UVB DNA保护 / 耐受</p></div></a>
+      <a class="lane amber reveal" href="#dal"><span class="lane-no">03</span><div><small>PHOTO-AGING</small><h3>光氧化防御</h3><b>油萃 DA-L</b><p>岩藻黄素 / 油相递送 / 避光</p></div></a>
+      <a class="lane coral reveal" href="#znpro"><span class="lane-no">04</span><div><small>MICROENVIRONMENT</small><h3>炎性微环境</h3><b>OLGOSEA ZnPro-II</b><p>透皮 / 舒缓 / 微循环</p></div></a>
+      <a class="lane violet reveal" href="#fct1"><span class="lane-no">05</span><div><small>REMODELING</small><h3>结构肽修护</h3><b>大米蛋白肽 FCT1</b><p>28天人体 / 保湿 / 皱纹 / 弹性</p></div></a>
+    </div>
+    <div class="synergy reveal"><span>递送先行</span><i>→</i><span>信号启动</span><i>→</i><span>能量供给</span><i>→</i><span>环境降噪</span><i>→</i><span>结构重建</span></div>
+  </div></section>
+
+  <section class="section section-dark" id="ingredients"><div class="shell">
+    <div class="section-heading reveal"><div><span class="section-no">03</span><span class="eyebrow">CORE INGREDIENTS</span></div><h2>五款核心原料，一条完整抗衰链路</h2><p>每款原料均按“客户一句话—关键数据—报告类型—配方入口—证据边界”展开，便于销售介绍、研发选型与品牌立项。</p></div>
+
+    <article class="ingredient mint" id="pdrn">
+      <div class="ingredient-head reveal"><div><span class="track-tag">01 · REGENERATION SIGNAL</span><h3>HWPDRN® DDS</h3><p class="ingredient-slogan">让 PDRN 从“概念”走向“可达”</p></div><div class="ingredient-maker">DNA钠递送体系<br><span>递送型PDRN原料</span></div></div>
+      <div class="ingredient-grid">
+        <div class="visual-card reveal"><img src="assets/pdrn-micrograph.png" alt="HWPDRN DDS重组皮肤模型荧光图"><span>COLIII 重组全层皮肤模型荧光图</span></div>
+        <div class="data-card reveal"><div class="card-label">离体猪皮累计渗透量</div><h4>同报告口径下，DDS组高于普通PDRN</h4><div class="bar-group"><div class="bar-row"><span>8h 普通PDRN</span><i style="--w:23%"></i><b>11.62</b></div><div class="bar-row hot"><span>8h HWPDRN DDS</span><i style="--w:53%"></i><b>27.27</b></div><div class="bar-row"><span>24h 普通PDRN</span><i style="--w:38%"></i><b>19.59</b></div><div class="bar-row hot"><span>24h HWPDRN DDS</span><i style="--w:100%"></i><b>51.49</b></div></div><div class="data-callouts"><div><b>+134.68%</b><span>8h相对提升</span></div><div><b>+162.84%</b><span>24h相对提升</span></div></div></div>
+        <div class="tech-card reveal"><h4>六份盖章测试覆盖</h4><ul><li>巴马香猪皮 Franz 扩散透皮</li><li>A2AR / EGFR / FGFR1 相关表达</li><li>COLIII 结构蛋白表达</li><li>原料安全、稳定性与配伍资料</li></ul><div class="micro-metrics"><span><b>+43.42%</b>A2AR相关指标</span><span><b>+54.24%</b>EGFR表达</span><span><b>+83.80%</b>FGFR1表达</span><span><b>+74.85%</b>COLIII表达</span></div><p class="boundary">模型数据用于原料筛选与机制表达，不等同于人体成品功效。</p></div>
+      </div>
     </article>
 
-    <article class="evidence coral">
-      <div class="identity"><div class="track">MICROENVIRONMENT RESET</div><h3>OLGOSEA ZnPro-II</h3><div class="maker">青岛海大 · 海洋寡糖</div><div class="badges"><span class="badge">第三方舒缓报告</span><span class="badge">第三方抗衰紧致</span><span class="badge">模型透皮</span></div></div>
-      <div class="body"><h4>报告覆盖</h4><p>资料包含第三方舒缓功效评测、抗衰紧致/弹性蛋白酶抑制报告，以及重组皮肤模型透皮吸收试验。</p><ul><li>1%溶液、重组皮肤模型，追踪0.5h至24h吸收</li><li>同时具备抗炎活性实验室报告</li><li>适合眼周微循环、敏感肌和痘肌抗衰组合</li></ul><div class="boundary">第三方报告与模型透皮数据需保留测试浓度和模型条件。</div></div>
-      <div class="metrics"><div class="metric"><b>67.82%</b><span>24h 全皮吸收率</span></div><div class="metric"><b>28.70%</b><span>24h 真皮层占比</span></div><div class="metric wide"><b>0.1–1%</b><span>建议添加量；水相、低温后添加</span></div></div>
+    <article class="ingredient blue" id="s57">
+      <div class="ingredient-head reveal"><div><span class="track-tag">02 · ENERGY LONGEVITY</span><h3>SEMCTIVE 藻丽启源 S57°</h3><p class="ingredient-slogan">把“抗衰”讲到线粒体</p></div><div class="ingredient-maker">青岛海大<br><span>南极海茸 × 麦哲伦冰海红藻</span></div></div>
+      <div class="ingredient-grid reverse">
+        <div class="visual-card technical-full reveal"><img src="assets/s57-evidence-full.png" alt="藻丽启源S57完整功效梳理资料页"><span>资料包中的完整功效梳理页·线粒体/细胞荧光图</span></div>
+        <div class="tech-card reveal"><h4>能量寿命的双证据方向</h4><ul><li>ATP 提升呈剂量趋势</li><li>UVB条件下提供DNA损伤保护证据</li><li>0.5%精华半脸人体耐受设计</li><li>适合“线粒体抗衰 / 熬夜肌 / 光老化”叙事</li></ul><div class="micro-metrics"><span><b>≥90%</b>藻寡糖纯度</span><span><b>≤10 kDa</b>分子量</span><span><b>n=17</b>耐受样本</span><span><b>0</b>斑贴反应</span></div><p class="boundary">现有文件名未明确标注“第三方”，页面按“资料包测试数据”展示。</p></div>
+        <div class="formula-card reveal"><span class="card-label">FORMULATION</span><h4>配方应用提示</h4><dl><div><dt>建议添加</dt><dd>0.1–1%</dd></div><div><dt>添加阶段</dt><dd>低于45℃后添加</dd></div><div><dt>推荐剂型</dt><dd>精华、眼霜、乳液</dd></div><div><dt>组合方向</dt><dd>能量 + 光防御 + 舒缓</dd></div></dl></div>
+      </div>
     </article>
 
-    <article class="evidence violet">
-      <div class="identity"><div class="track">PEPTIDE REMODELING</div><h3>大米蛋白肽 FCT1</h3><div class="maker">无锡金农 · 水解大米蛋白</div><div class="badges"><span class="badge">人体临床</span><span class="badge">抗皱测试</span><span class="badge">抗氧化测试</span><span class="badge">分子量检测</span></div></div>
-      <div class="body"><h4>报告覆盖</h4><p>具备人体临床、抗皱、化学/细胞抗氧化、细胞内酪氨酸酶活力及分子量检测等多份报告。</p><ul><li>1.5%抗皱乳液，n=32，连续使用28天</li><li>含水量、皱纹面积、弹性与紧致度均有跟踪</li><li>另有专利与原料报送码资料</li></ul><div class="boundary">分子量峰面积属于原料研究/质控指标，不等同于人体吸收率。</div></div>
-      <div class="metrics"><div class="metric"><b>+7.42%</b><span>D28 角质层含水量</span></div><div class="metric"><b>−13.87%</b><span>D28 皱纹面积占比</span></div><div class="metric wide"><b>84.81%</b><span>＜2000 Da 峰面积占比（QC）</span></div></div>
+    <article class="ingredient amber" id="dal">
+      <div class="ingredient-head reveal"><div><span class="track-tag">03 · PHOTO-AGING DEFENSE</span><h3>SEACTIVE® 油萃 DA-L</h3><p class="ingredient-slogan">把光老化防御放进油相</p></div><div class="ingredient-maker">青岛海大<br><span>油溶岩藻黄素</span></div></div>
+      <div class="ingredient-grid">
+        <div class="product-visual reveal"><img src="assets/da-l-bottle.png" alt="油萃DA-L产品示意"><div><span>油相递送</span><b>岩藻黄素 ≥0.2%</b></div></div>
+        <div class="tech-card reveal"><h4>配方身份清晰</h4><ul><li>98.85% 霍霍巴籽油</li><li>1.00% 南极洲丛梗藻提取物</li><li>0.15% 生育酚</li><li>第三方农残检测 + 配伍/稳定性报告</li></ul><div class="literature"><span>公开文献数据</span><b>3.5</b><p>岩藻黄素单线态氧淬灭速率常数；β-胡萝卜素为1.1。该数据为成分文献，不是DA-L成品人体测试。</p></div></div>
+        <div class="formula-card reveal"><span class="card-label">OIL-PHASE ACTIVE</span><h4>油相抗衰入口</h4><dl><div><dt>建议添加</dt><dd>0.05–1%</dd></div><div><dt>体系</dt><dd>油相 / 纯油 / 乳化油相</dd></div><div><dt>储存</dt><dd>避光、密封</dd></div><div><dt>适配</dt><dd>修护油、晚霜、防晒</dd></div></dl><p class="boundary">第三方报告验证安全/农残；抗炎与单线态氧数据来源于岩藻黄素文献。</p></div>
+      </div>
     </article>
 
-    <article class="evidence gold">
-      <div class="identity"><div class="track">PHOTO-AGING DEFENSE</div><h3>SEACTIVE® 油萃 DA-L</h3><div class="maker">青岛海大 · 油溶岩藻黄素</div><div class="badges"><span class="badge">第三方农残检测</span><span class="badge">稳定性/配伍</span><span class="badge">成分文献</span></div></div>
-      <div class="body"><h4>报告覆盖</h4><p>资料包含第三方农残测试、原料稳定性与配伍报告；抗炎和单线态氧数据来自岩藻黄素公开文献。</p><ul><li>98.85%霍霍巴籽油、1%南极洲丛梗藻提取物、0.15%生育酚</li><li>岩藻黄素含量≥0.2%，建议添加0.05–1%</li><li>适合油相抗氧化与光老化防御概念</li></ul><div class="boundary">第三方报告验证的是安全/农残；文献数据不能写成 DA-L 成品人体功效。</div></div>
-      <div class="metrics"><div class="metric"><b>≥0.2%</b><span>岩藻黄素含量</span></div><div class="metric"><b>0.05–1%</b><span>建议添加量</span></div><div class="metric wide"><b>油相 / 避光</b><span>配方与储存要点</span></div></div>
+    <article class="ingredient coral" id="znpro">
+      <div class="ingredient-head reveal"><div><span class="track-tag">04 · MICROENVIRONMENT RESET</span><h3>OLGOSEA ZnPro-II</h3><p class="ingredient-slogan">先穿透，再管理炎性微环境</p></div><div class="ingredient-maker">青岛海大<br><span>淡黑巨海藻寡糖</span></div></div>
+      <div class="ingredient-grid reverse">
+        <div class="visual-card wide-photo reveal"><img src="assets/oligosea-origin.png" alt="OLGOSEA海洋寡糖来源"><span>南极冰域海藻来源与科研背景</span></div>
+        <div class="data-card reveal"><div class="card-label">重组皮肤模型 · 全皮吸收率</div><h4>1%溶液，0.5–24h 动态追踪</h4><svg class="line-chart" viewBox="0 0 520 220" role="img" aria-label="全皮吸收率从0.5小时12.58%升至24小时67.82%"><g class="grid"><line x1="48" y1="30" x2="500" y2="30"/><line x1="48" y1="75" x2="500" y2="75"/><line x1="48" y1="120" x2="500" y2="120"/><line x1="48" y1="165" x2="500" y2="165"/><line x1="48" y1="198" x2="500" y2="198"/></g><polyline points="68,166 165,122 270,76 378,55 485,42"/><g class="dots"><circle cx="68" cy="166" r="5"/><circle cx="165" cy="122" r="5"/><circle cx="270" cy="76" r="5"/><circle cx="378" cy="55" r="5"/><circle cx="485" cy="42" r="5"/></g><g class="labels"><text x="68" y="188">0.5h</text><text x="165" y="144">35.60</text><text x="270" y="98">53.04</text><text x="378" y="77">60.98</text><text x="485" y="28">67.82</text></g></svg><div class="data-callouts"><div><b>67.82%</b><span>24h全皮吸收率</span></div><div><b>28.70%</b><span>24h真皮层占比</span></div></div></div>
+        <div class="tech-card reveal"><h4>从透皮到“降噪型抗衰”</h4><ul><li>第三方淡化痘印与褪红舒缓评测</li><li>弹性蛋白酶抑制/抗衰紧致方向</li><li>抗炎活性与微循环研究资料</li><li>适配眼周、痘肌、敏感肌抗衰</li></ul><div class="micro-metrics"><span><b>0.1–1%</b>建议添加量</span><span><b>水相</b>低温后添加</span></div><p class="boundary">透皮结果来自重组皮肤模型；第三方结果需保留测试浓度和方法。</p></div>
+      </div>
     </article>
 
-    <article class="evidence blue">
-      <div class="identity"><div class="track">ENERGY LONGEVITY</div><h3>SEMCTIVE 藻丽启源 S57°</h3><div class="maker">青岛海大 · 红藻寡糖</div><div class="badges"><span class="badge">细胞测试数据</span><span class="badge">人体耐受设计</span><span class="badge">SPEC</span></div></div>
-      <div class="body"><h4>资料覆盖</h4><p>产品资料展示 ATP 提升趋势、UVB 条件下 DNA 损伤保护，以及0.5%精华半脸人体耐受设计。</p><ul><li>藻寡糖纯度≥90%，分子量≤10 kDa</li><li>人体耐受：n=17，D0 / D7 / D15，斑贴反应0</li><li>建议0.1–1%，低于45℃后添加</li></ul><div class="boundary">当前资料文件名未明确标注“第三方检测”，因此单独标为资料包测试数据，不与第三方报告混写。</div></div>
-      <div class="metrics"><div class="metric"><b>≥90%</b><span>藻寡糖纯度</span></div><div class="metric"><b>≤10 kDa</b><span>分子量</span></div><div class="metric"><b>n=17</b><span>人体耐受样本</span></div><div class="metric"><b>0</b><span>斑贴反应</span></div></div>
+    <article class="ingredient violet" id="fct1">
+      <div class="ingredient-head reveal"><div><span class="track-tag">05 · PEPTIDE REMODELING</span><h3>大米蛋白肽 FCT1</h3><p class="ingredient-slogan">28天，把结构变化落到人体</p></div><div class="ingredient-maker">无锡金农<br><span>水解大米蛋白</span></div></div>
+      <div class="ingredient-grid">
+        <div class="visual-card portrait reveal"><img src="assets/fct1-rice.png" alt="大米蛋白肽FCT1原料来源"><span>大米来源的小分子蛋白肽</span></div>
+        <div class="data-card reveal"><div class="card-label">人体测试 · 1.5%抗皱乳液</div><h4>n=32，连续使用28天</h4><div class="human-results"><div class="positive"><b>+7.42%</b><span>D28角质层含水量</span></div><div class="negative"><b>−13.87%</b><span>D28皱纹面积占比</span></div></div><p>报告同时追踪弹性与紧致度；人体数据必须与测试配方、浓度、样本量及周期一起表达。</p></div>
+        <div class="tech-card reveal"><h4>从人体感知到原料质控</h4><ul><li>人体临床、抗皱与保湿测试</li><li>化学/细胞抗氧化测试</li><li>细胞内酪氨酸酶活力测试</li><li>分子量检测与专利/报送码资料</li></ul><div class="qc"><b>84.81%</b><span>＜2000 Da 峰面积占比（QC）</span></div><p class="boundary">分子量峰面积是原料研究/质控指标，不等同于人体吸收率。</p></div>
+      </div>
     </article>
-  </div>
-</div></section>
+  </div></section>
 
-<section class="section" id="boundary"><div class="wrap">
-  <div class="section-head"><h2>证据怎么讲，决定能讲到哪一层</h2><p>同一套原料可以形成很有记忆点的抗衰故事，但技术介绍、机制表达、人体证据与成品宣称必须分层。</p></div>
-  <div class="levels">
-    <article class="level"><b>L1</b><h3>原料事实</h3><p>来源、组成、纯度、分子量、建议添加量，可直接用于技术介绍。</p></article>
-    <article class="level"><b>L2</b><h3>机制证据</h3><p>细胞、离体或重组皮肤模型数据，用“原料研究显示”表达。</p></article>
-    <article class="level"><b>L3</b><h3>人体证据</h3><p>必须保留浓度、配方、样本量、周期和测试条件。</p></article>
-    <article class="level"><b>L4</b><h3>成品宣称</h3><p>最终配方仍需稳定性、安全性和成品人体功效重新验证。</p></article>
-  </div>
-  <div class="excluded"><strong>暂未纳入核心清单：</strong>PDRN-C 当前资料包仅含 MSDS、SPEC、TDS 与原料报送码，缺少同等级功效或透皮测试报告；补齐后可进入赛道。</div>
-</div></section>
+  <section class="section" id="reports"><div class="shell">
+    <div class="section-heading reveal"><div><span class="section-no">04</span><span class="eyebrow">REPORT GALLERY</span></div><h2>第三方与盖章报告原图</h2><p>已从资料包中补齐透皮、稳定性、信号表达、抗炎、紧致、人体抗皱与安全检测证据。点击可查看完整结果页；对外正式使用时建议同步提供完整PDF原件。</p></div>
 
-<section class="cta" id="contact"><div class="wrap"><div class="cta-card">
-  <div><h2>索取报告原件、样品与配方建议</h2><p>可按“日间光防御 / 夜间再生 / 眼周微循环 / 油相修护”四个方向组合选型。</p></div>
-  <div class="contact"><span>电话 / 微信：17375457376</span><a href="/products/actives/">查看功效活性物产品库</a></div>
-</div></div></section>
+    <div class="report-group">
+      <div class="report-group-title reveal"><div><b>PDRN-DDS</b><span>透皮·稳定·受体·结构信号</span></div><strong>6项</strong></div>
+      <div class="report-grid">
+        <button class="report-card reveal" data-hide-company="true" data-image="assets/report-pdrn-permeation.jpg" data-caption="PDRN-DDS巴马香猪皮经皮渗透报告结果页（预览已隐藏供应商名称）"><img src="assets/report-pdrn-permeation.jpg" alt="PDRN经皮渗透报告"><span><b>PDRN-DDS</b>离体透皮·8h/24h</span></button>
+        <button class="report-card reveal" data-hide-company="true" data-image="assets/report-pdrn-stability.jpg" data-caption="PDRN-DDS核酸酶作用下稳定性评估结果页（预览已隐藏供应商名称）"><img src="assets/report-pdrn-stability.jpg" alt="PDRN核酸酶稳定性报告"><span><b>PDRN-DDS</b>抗核酸酶稳定性</span></button>
+        <button class="report-card reveal" data-hide-company="true" data-image="assets/report-pdrn-a2ar.jpg" data-caption="PDRN-DDS重组全层皮肤A2AR/cAMP相关报告结果页（预览已隐藏供应商名称）"><img src="assets/report-pdrn-a2ar.jpg" alt="PDRN A2AR报告"><span><b>PDRN-DDS</b>A2AR/cAMP相关指标</span></button>
+        <button class="report-card reveal" data-hide-company="true" data-image="assets/report-pdrn-col3.jpg" data-caption="PDRN-DDS重组全层皮肤COLIII表达报告结果页（预览已隐藏供应商名称）"><img src="assets/report-pdrn-col3.jpg" alt="PDRN COLIII报告"><span><b>PDRN-DDS</b>COLIII表达</span></button>
+        <button class="report-card reveal" data-hide-company="true" data-image="assets/report-pdrn-egfr.jpg" data-caption="PDRN-DDS重组全层皮肤EGFR表达报告结果页（预览已隐藏供应商名称）"><img src="assets/report-pdrn-egfr.jpg" alt="PDRN EGFR报告"><span><b>PDRN-DDS</b>EGFR表达·+54.24%</span></button>
+        <button class="report-card reveal" data-hide-company="true" data-image="assets/report-pdrn-fgfr1.jpg" data-caption="PDRN-DDS重组全层皮肤FGFR1表达报告结果页（预览已隐藏供应商名称）"><img src="assets/report-pdrn-fgfr1.jpg" alt="PDRN FGFR1报告"><span><b>PDRN-DDS</b>FGFR1表达·+83.80%</span></button>
+      </div>
+    </div>
+
+    <div class="report-group">
+      <div class="report-group-title reveal"><div><b>OLGOSEA ZnPro-II</b><span>透皮·抗炎·紧致·舒缓</span></div><strong>4项</strong></div>
+      <div class="report-grid">
+        <button class="report-card reveal" data-image="assets/report-znpro-permeation.jpg" data-caption="OLGOSEA ZnPro-II重组皮肤模型透皮吸收试验结果页"><img src="assets/report-znpro-permeation.jpg" alt="ZnPro-II模型透皮报告"><span><b>ZnPro-II</b>24h全皮透皮·67.82%</span></button>
+        <button class="report-card reveal" data-image="assets/report-znpro-anti-inflammatory.jpg" data-caption="OLGOSEA ZnPro-II抗炎活性与NF-κB相关信号调节资料页"><img src="assets/report-znpro-anti-inflammatory.jpg" alt="ZnPro-II抗炎活性报告"><span><b>ZnPro-II</b>抗炎信号调节</span></button>
+        <button class="report-card reveal" data-image="assets/report-znpro-elastase.jpg" data-caption="OLGOSEA ZnPro-II第三方弹性蛋白酶抑制率检测结果页"><img src="assets/report-znpro-elastase.jpg" alt="ZnPro-II弹性蛋白酶抑制报告"><span><b>ZnPro-II</b>弹性蛋白酶抑制·85.02%</span></button>
+        <button class="report-card landscape reveal" data-image="assets/report-oligosea-soothing.jpg" data-caption="OLGOSEA ZnPro-II淡化痘印与褪红舒缓第三方评测资料页"><img src="assets/report-oligosea-soothing.jpg" alt="ZnPro-II第三方舒缓评测"><span><b>ZnPro-II</b>第三方舒缓评测</span></button>
+      </div>
+    </div>
+
+    <div class="report-group">
+      <div class="report-group-title reveal"><div><b>大米蛋白肽 FCT1</b><span>人体抗皱·抗氧化·分子量质控</span></div><strong>4项</strong></div>
+      <div class="report-grid">
+        <button class="report-card reveal" data-image="assets/report-fct1-cover.jpg" data-caption="1.5%大米蛋白肽抗皱乳液人体测试报告封面"><img src="assets/report-fct1-cover.jpg" alt="FCT1人体报告封面"><span><b>FCT1</b>人体测试·n=32</span></button>
+        <button class="report-card reveal" data-image="assets/report-fct1-wrinkle.jpg" data-caption="FCT1人体测试28天皱纹面积占比结果页"><img src="assets/report-fct1-wrinkle.jpg" alt="FCT1皱纹报告结果"><span><b>FCT1</b>皱纹面积·28天</span></button>
+        <button class="report-card reveal" data-image="assets/report-fct1-antioxidant.jpg" data-caption="FCT1在H2O2诱导HaCaT细胞模型中的ROS清除结果页"><img src="assets/report-fct1-antioxidant.jpg" alt="FCT1细胞抗氧化报告"><span><b>FCT1</b>细胞ROS清除</span></button>
+        <button class="report-card reveal" data-image="assets/report-fct1-mw.jpg" data-caption="FCT1肽分子量分布检测报告结果页"><img src="assets/report-fct1-mw.jpg" alt="FCT1分子量检测报告"><span><b>FCT1</b>分子量分布质控</span></button>
+      </div>
+    </div>
+
+    <div class="report-group compact">
+      <div class="report-group-title reveal"><div><b>油萃 DA-L</b><span>安全性与基础质控</span></div><strong>1项</strong></div>
+      <div class="report-grid">
+        <button class="report-card reveal" data-image="assets/report-da-pesticide.jpg" data-caption="油萃DA-L第三方农残检测报告首页"><img src="assets/report-da-pesticide.jpg" alt="油萃DA-L第三方农残报告"><span><b>油萃 DA-L</b>第三方农残检测</span></button>
+      </div>
+    </div>
+    <div class="report-note reveal"><strong>报告口径提示</strong><span>第三方安全检测 ≠ 功效报告；原料机制模型 ≠ 人体成品功效；公开文献数据 ≠ 产品实测数据。</span></div>
+  </div></section>
+
+  <section class="section section-dark" id="formulas"><div class="shell">
+    <div class="section-heading reveal"><div><span class="section-no">05</span><span class="eyebrow">FORMULA CONCEPTS</span></div><h2>一套矩阵，四个客户入口</h2><p>以下为概念组合建议，用于客户沟通和项目立项，不是已经完成稳定性与人体功效验证的成品配方。</p></div>
+    <div class="formula-grid">
+      <article class="formula concept-day reveal"><span class="formula-tag">DAY</span><h3>日间抗光老乳</h3><p>光氧化 + 能量 + 炎性降噪</p><ul><li><b>S57°</b><span>0.3%</span></li><li><b>DA-L</b><span>0.2%</span></li><li><b>ZnPro-II</b><span>0.3%</span></li><li><b>FCT1</b><span>1.5%</span></li></ul><small>适合：城市通勤、轻熟龄、光老化概念</small></article>
+      <article class="formula concept-night reveal"><span class="formula-tag">NIGHT</span><h3>夜间再生精华</h3><p>递送启动 + 能量补给 + 结构重建</p><ul><li><b>HWPDRN DDS</b><span>5%</span></li><li><b>S57°</b><span>0.5%</span></li><li><b>ZnPro-II</b><span>0.5%</span></li><li><b>FCT1</b><span>1.5%</span></li></ul><small>适合：熬夜肌、密集修护、抗衰精华</small></article>
+      <article class="formula concept-eye reveal"><span class="formula-tag">EYE</span><h3>眼周微循环乳</h3><p>微环境 + 紧致 + 熬夜肌管理</p><ul><li><b>HWPDRN DDS</b><span>3%</span></li><li><b>ZnPro-II</b><span>0.5%</span></li><li><b>S57°</b><span>0.3%</span></li><li><b>FCT1</b><span>1.5%</span></li></ul><small>适合：黑眼圈、浮肿、眼周初老概念</small></article>
+      <article class="formula concept-oil reveal"><span class="formula-tag">OIL</span><h3>夜间光防御修护油</h3><p>油相抗氧 + 屏障叙事</p><ul><li><b>DA-L</b><span>0.3–0.5%</span></li><li><b>油相抗氧体系</b><span>按配方</span></li><li><b>轻感润肤油脂</b><span>按剂型</span></li><li><b>避光包装</b><span>必要</span></li></ul><small>适合：以油养肤、冬季修护、夜间精华油</small></article>
+    </div>
+    <div class="formula-warning reveal">概念配方 ≠ 已验证成品。实际添加量需结合供应商最新 SPEC、法规、配伍、稳定性、安全性及成品人体功效测试。</div>
+  </div></section>
+
+  <section class="section" id="extensions"><div class="shell">
+    <div class="section-heading reveal"><div><span class="section-no">06</span><span class="eyebrow">PORTFOLIO EXTENSION</span></div><h2>从五款核心，扩展到完整产品矩阵</h2><p>核心赛道负责“有报告的主故事”，产品矩阵中的其他原料负责增强抗氧、屏障、基质、即时肤感和差异化剂型。</p></div>
+    <div class="extension-grid">
+      <article class="extension reveal"><span>抗氧加固</span><h3>麦角硫因 / 富勒烯</h3><p>补充自由基清除与城市氧化压力故事；富勒烯具备水溶、脂溶及HA复配版本。</p></article>
+      <article class="extension reveal"><span>基质重建</span><h3>玻色因 / 重组III型胶原</h3><p>强化GAG、胶原与饱满紧致方向，可与FCT1组成“肽+胶原+基质”路线。</p></article>
+      <article class="extension reveal"><span>压力防御</span><h3>依克多因 / 御光素</h3><p>覆盖屏障、光损伤、蓝光与环境压力管理，适合日间抗老和敏感肌抗衰。</p></article>
+      <article class="extension reveal"><span>舒缓修护</span><h3>CICA EVS / PURSLANE EVS</h3><p>积雪草与马齿苋外泌体补充抗炎、修护与纳米递送概念。</p></article>
+      <article class="extension reveal"><span>油相紧致</span><h3>油溶多肽 / 油溶胶原</h3><p>把促胶原与紧致故事扩展到面霜、修护油、防晒和彩妆油相。</p></article>
+      <article class="extension reveal"><span>屏障基底</span><h3>神经酰胺 / 天然植物油脂</h3><p>为“年轻稳态”提供长期屏障底盘，改善干燥、粗糙与敏感反复。</p></article>
+    </div>
+    <p class="extension-boundary reveal">扩展池来自现有产品矩阵的功效定位；正式进入客户方案前，应按具体项目补齐相应TDS、功效报告与法规资料。</p>
+  </div></section>
+
+  <section class="section section-dark" id="boundary"><div class="shell">
+    <div class="section-heading reveal"><div><span class="section-no">07</span><span class="eyebrow">CLAIM ARCHITECTURE</span></div><h2>有噱头，也要守住证据边界</h2><p>一句话原则：能讲到哪一层，由证据决定；不是由文案力度决定。</p></div>
+    <div class="levels"><article class="level reveal"><b>L1</b><div><h3>原料事实</h3><p>来源、组成、纯度、分子量、建议添加量。</p></div><span>可用于技术介绍</span></article><article class="level reveal"><b>L2</b><div><h3>机制证据</h3><p>细胞、离体、重组皮肤模型的数据。</p></div><span>用“原料研究显示”</span></article><article class="level reveal"><b>L3</b><div><h3>人体证据</h3><p>特定配方、浓度、样本量与周期下的人体结果。</p></div><span>保留完整测试条件</span></article><article class="level reveal"><b>L4</b><div><h3>成品宣称</h3><p>最终配方的稳定性、安全性及人体功效。</p></div><span>上市前重新验证</span></article></div>
+    <div class="excluded reveal"><strong>PDRN-C 暂未纳入核心清单</strong><p>当前资料包以 MSDS、SPEC、TDS 与原料报送码为主，缺少与HWPDRN DDS同等级的透皮或功效报告；补齐后可进入赛道。</p></div>
+  </div></section>
+
+  <section class="contact-section" id="contact"><div class="shell contact-card reveal"><div><span class="eyebrow">NEXT STEP</span><h2>从趋势概念，走到可验证的配方平台</h2><p>可按日间光防御、夜间再生、眼周微循环、油相修护四个方向，进一步提供报告原件、样品与项目配方建议。</p></div><div class="contact-actions"><span>电话 / 微信<br><b>17375457376</b></span><a href="/products/actives/">查看功效活性物产品库</a></div></div></section>
 </main>
 
-<footer><div class="wrap">赋铖生物科技（上海）有限公司 · 上海市静安区天目中路585号新梅大厦612室</div></footer>
+<footer><div class="shell"><span>赋铖生物科技（上海）有限公司</span><span>上海市静安区天目中路585号新梅大厦612室</span><span>页面为客户沟通版预览 · 数据以报告原件与最新TDS为准</span></div></footer>
+<dialog class="lightbox" id="lightbox"><button class="lightbox-close" type="button" aria-label="关闭">×</button><div class="lightbox-image-frame"><img alt="报告原图放大预览"></div><p></p></dialog>
+<script src="script.js"></script>
 </body>
 </html>
