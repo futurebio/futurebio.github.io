@@ -112,6 +112,9 @@ tr:hover td.rowh-h{color:var(--blue)}
 .track-name{display:block;font-size:14px;font-weight:800;line-height:1.25}
 .track-desc{display:block;margin-top:3px;font-size:11px;color:var(--muted);white-space:nowrap}
 .track-arrow{margin-left:auto;color:var(--blue);font-size:17px;font-weight:800}
+.track-entry.haircare{border-color:#B8D8C9;box-shadow:0 7px 20px rgba(31,90,73,.09)}
+.track-entry.haircare:hover{border-color:#6FA98F;box-shadow:0 10px 26px rgba(31,90,73,.15)}
+.track-entry.haircare .track-icon{background:linear-gradient(135deg,#1F5A49,#86AC7D)}
 .site-view[hidden]{display:none!important}
 .spa-remote{max-width:1440px;margin:0 auto;min-height:72vh;background:var(--bg)}
 .frame-status{max-width:1400px;margin:20px auto;padding:16px 20px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--muted);font-size:13px}
@@ -135,7 +138,10 @@ tr:hover td.rowh-h{color:var(--blue)}
       <button class="track-entry nav-view" type="button" data-view="antiaging" data-path="anti-aging/" aria-pressed="false">
         <span class="track-icon" aria-hidden="true">✦</span>
         <span class="track-copy"><span class="track-name">抗衰赛道</span><span class="track-desc">五维再生抗衰 · 原料组合 · 第三方证据</span></span>
-        <span class="track-arrow" aria-hidden="true">›</span>
+      </button>
+      <button class="track-entry haircare nav-view" type="button" data-view="haircare" data-path="hair-care/" aria-pressed="false">
+        <span class="track-icon" aria-hidden="true">♧</span>
+        <span class="track-copy"><span class="track-name">洗护赛道</span><span class="track-desc">植物清洁 · 头皮护理 · 发丝修护</span></span>
       </button>
     </div>
   </section>
@@ -235,7 +241,7 @@ sres.addEventListener('click',e=>{
   const frame=document.getElementById('contentFrame');
   const status=document.getElementById('frameStatus');
   const controls=[...document.querySelectorAll('.nav-view')];
-  const labels={products:'产品库213款',efficacy:'按功效找原料',antiaging:'抗衰赛道',chitosan:'壳聚糖专题',rice:'大米衍生物专题',haida:'青岛海大专题',yutai:'西安宇泰专题',baoying:'联合宝莹专题',jingcui:'中科菁萃专题'};
+  const labels={products:'产品库213款',efficacy:'按功效找原料',antiaging:'抗衰赛道',haircare:'洗护赛道',chitosan:'壳聚糖专题',rice:'大米衍生物专题',haida:'青岛海大专题',yutai:'西安宇泰专题',baoying:'联合宝莹专题',jingcui:'中科菁萃专题'};
   let currentView='matrix';
   let resizeObserver=null;
 
@@ -275,7 +281,7 @@ sres.addEventListener('click',e=>{
       try{url=new URL(link.href,frame.contentWindow.location.href);}catch(_){return;}
       if(url.origin!==location.origin&&location.protocol!=='file:')return;
       const path=url.pathname.replace(/^\/+/, '');
-      const view=path.startsWith('products/')?'products':path.startsWith('efficacy/')?'efficacy':path.startsWith('anti-aging/')?'antiaging':path.startsWith('chitosan/')?'chitosan':path.startsWith('rice/')?'rice':path.startsWith('qingdao-haida/')?'haida':path.startsWith('xian-yutai/')?'yutai':path.startsWith('lianhe-baoying/')?'baoying':path.startsWith('zhongke-jingcui/')?'jingcui':path?'': 'matrix';
+      const view=path.startsWith('products/')?'products':path.startsWith('efficacy/')?'efficacy':path.startsWith('anti-aging/')?'antiaging':path.startsWith('hair-care/')?'haircare':path.startsWith('chitosan/')?'chitosan':path.startsWith('rice/')?'rice':path.startsWith('qingdao-haida/')?'haida':path.startsWith('xian-yutai/')?'yutai':path.startsWith('lianhe-baoying/')?'baoying':path.startsWith('zhongke-jingcui/')?'jingcui':path?'': 'matrix';
       if(!view)return;
       event.preventDefault();
       showView(view,view==='matrix'?'':path+(url.hash||''));
@@ -317,7 +323,7 @@ sres.addEventListener('click',e=>{
     let url;
     try{url=new URL(link.href);}catch(_){return;}
     const path=url.pathname.replace(/^\/+/, '');
-    const view=path.startsWith('products/')?'products':path.startsWith('efficacy/')?'efficacy':path.startsWith('anti-aging/')?'antiaging':path.startsWith('chitosan/')?'chitosan':path.startsWith('rice/')?'rice':path.startsWith('qingdao-haida/')?'haida':path.startsWith('xian-yutai/')?'yutai':path.startsWith('lianhe-baoying/')?'baoying':path.startsWith('zhongke-jingcui/')?'jingcui':null;
+    const view=path.startsWith('products/')?'products':path.startsWith('efficacy/')?'efficacy':path.startsWith('anti-aging/')?'antiaging':path.startsWith('hair-care/')?'haircare':path.startsWith('chitosan/')?'chitosan':path.startsWith('rice/')?'rice':path.startsWith('qingdao-haida/')?'haida':path.startsWith('xian-yutai/')?'yutai':path.startsWith('lianhe-baoying/')?'baoying':path.startsWith('zhongke-jingcui/')?'jingcui':null;
     if(!view)return;
     event.preventDefault();
     showView(view,path+(url.hash||''));
