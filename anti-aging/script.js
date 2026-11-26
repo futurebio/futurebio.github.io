@@ -13,7 +13,7 @@
   var lightboxImage=lightbox.querySelector('img');
   var lightboxFrame=lightbox.querySelector('.lightbox-image-frame');
   var lightboxCaption=lightbox.querySelector('p');
-  document.querySelectorAll('.report-card').forEach(function(card){
+  document.querySelectorAll('.report-card, .market-preview').forEach(function(card){
     card.addEventListener('click',function(){
       lightboxImage.src=card.getAttribute('data-image');
       lightboxCaption.textContent=card.getAttribute('data-caption')||'';
